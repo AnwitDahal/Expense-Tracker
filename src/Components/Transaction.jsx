@@ -1,17 +1,14 @@
-import React, { useContext } from 'react'
-import { GlobalContext } from '../Context/GlobalState';
+import React from "react";
 
-
-const Transaction = () => {
-    const {transactions} = useContext(GlobalContext);
+const Transaction = ({ transaction }) => {
   return (
-        <li className='bg-slate-200 border border-r-[3px] border-e-red-800 py-1 flex flex-row px-2'>
-       <p className='mr-48'>
-        {transactions.text}
-        </p> 
-         <span className=''>-400</span> 
+    <li className="bg-slate-200 border w-[18rem] border-r-[3px] border-e-red-800 py-1 flex flex-row px-2">
+      <div className="flex ">
+        <p className="">{transaction.text}</p>
+        <span className="">{transaction.amount}</span>
+      </div>
     </li>
-  )
-}
+  );
+};
 
-export default Transaction
+export default Transaction;
